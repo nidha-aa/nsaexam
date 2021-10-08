@@ -1,0 +1,136 @@
+exam@debian:~$ mkdir sales
+exam@debian:~$ cd sales
+exam@debian:~/sales$ mkdir location1
+----------------------------------location 1------------------------------------------------
+exam@debian:~/sales$ cd location1
+exam@debian:~/sales/location1$ cat>sales1.txt
+this file displays the first set of sales
+exam@debian:~/sales/location1$ cat sales1.txt
+this file displays the first set of sales
+exam@debian:~/sales/location1$ cat>sales2.txt
+This file has the the details of the second set of sales
+exam@debian:~/sales/location1$ cat>sales3.txt
+This file has the set of third sales
+exam@debian:~/sales/location1$ cat sales3.txt
+This file has the set of third sales
+----------------------------location2-------------------------------------------------------
+exam@debian:~/sales/location1$ cd ..
+exam@debian:~/sales$ mkdir location2
+exam@debian:~/sales$ cd location2
+exam@debian:~/sales/location2$ cat>pur1.txt
+Contains the details of the first det of purchase
+exam@debian:~/sales/location2$ cat>pur2.txt
+This contains the details of the second set of purchase
+exam@debian:~/sales/location2$ cat pur1.txt
+Contains the details of the first det of purchase
+exam@debian:~/sales/location2$ cat pur2.txt
+This contains the details of the second set of purchase
+exam@debian:~/sales/location2$ 
+ ------------------------------location3--------------------------------------------------
+ exam@debian:~/sales/location2$ cd ..
+exam@debian:~/sales$ mkdir location3
+exam@debian:~/sales$ cd location3
+exam@debian:~/sales/location3$ cat>stock1.txt
+oreo
+bourbourn
+lindt
+ferrero rocher
+galaxy
+patchi
+milkyway
+m and m
+strawberry
+pineapple
+litchie
+mercy
+exam@debian:~/sales/location3$ cat>stock2.txt
+abc
+efg
+edd
+        
+jkkld
+kelkje
+exam@debian:~/sales/location3$ cat stock1.txt
+oreo
+bourbourn
+lindt
+ferrero rocher
+galaxy
+patchi
+milkyway
+m and m
+strawberry
+pineapple
+litchie
+mercy
+exam@debian:~/sales/location3$ cat stock2.txt
+abc
+efg
+edd
+
+jkkld
+kelkje
+exam@debian:~/sales/location3$ 
+-----------------------------------------------Question1----------------------
+exam@debian:~/sales/location3$ cd ..
+exam@debian:~/sales$ cd location2
+exam@debian:~/sales/location2$ cat pur1.txt pur2.txt>pur3.txt
+exam@debian:~/sales/location2$ cat pur3.txt
+Contains the details of the first det of purchase
+This contains the details of the second set of purchase
+exam@debian:~/sales/location2$ 
+--------------------------------------------QUESTION 2----------------------------
+exam@debian:~/sales/location2$ cd ..
+exam@debian:~/sales$ cp -r location2/pur3.txt location3/stock3.txt
+exam@debian:~/sales$ cd location2
+exam@debian:~/sales/location2$ ls
+pur1.txt  pur2.txt  pur3  pur3.txt
+exam@debian:~/sales/location2$ cat pur3.txt
+Contains the details of the first det of purchase
+This contains the details of the second set of purchase
+exam@debian:~/sales/location2$ cd ..
+exam@debian:~/sales$ cd location3
+exam@debian:~/sales/location3$ cat stock3.txt
+Contains the details of the first det of purchase
+This contains the details of the second set of purchase
+exam@debian:~/sales/location3$ ls
+stock1.txt  stock2.txt  stock3.txt
+exam@debian:~/sales/location3$ 
+------------------------------------------QUESTION 3---------------------------------
+exam@debian:~/sales/location3$ cd ..
+exam@debian:~/sales$ cd location3
+exam@debian:~/sales/location3$ chmod a+x stock3.txt
+exam@debian:~/sales/location3$ chmod a+r stock3.txt
+exam@debian:~/sales/location3$ chmod a+w stock3.txt
+exam@debian:~/sales/location3$
+----------------------------------------QUESTION 4-----------------------------
+exam@debian:~/sales$ cd location3
+exam@debian:~/sales/location3$ head -n 10 stock1.txt
+oreo
+bourbourn
+lindt
+ferrero rocher
+galaxy
+patchi
+milkyway
+m and m
+strawberry
+pineapple
+exam@debian:~/sales/location3$
+-----------------------------------QUESTION 5----------------------
+exam@debian:~/sales/location3$ cd ..
+exam@debian:~/sales$ ls
+location1  location2  location3
+exam@debian:~/sales$ ls -l
+total 12
+drwxr-xr-x 2 exam exam 4096 Oct  8 13:58 location1
+drwxr-xr-x 2 exam exam 4096 Oct  8 14:15 location2
+drwxr-xr-x 2 exam exam 4096 Oct  8 14:19 location3
+exam@debian:~/sales$ 
+
+
+
+
+
+
+
